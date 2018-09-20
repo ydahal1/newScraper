@@ -1,0 +1,55 @@
+<style>
+.navbar-nav{
+    text-align: right;
+}
+
+
+.display-div{
+    background-color : lightgrey;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 15px;
+}
+
+#noteDiv{
+    /* text-align: center; */
+}
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <a class="navbar-brand" href="#">Mongo Scraper</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Saved Articles</a></li>
+                <li><a href="scrape">Scrape New</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="displayArticles" class="col-lg-8 col-md-8 col-sm-12 col-xs-12"></div>
+    <div id="noteDiv" class="col-lg-4 col-md-4 col-sm-12 col-xs-12"></div>
+
+</body>
+</html>
