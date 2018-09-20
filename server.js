@@ -18,7 +18,8 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //Connect to mongo db
-mongoose.connect("mongodb://localhost/bbc", {useNewUrlParser: true});
+// mongoose.connect("mongodb://localhost/bbc", {useNewUrlParser: true});
+mongoose.connect("mongodb://heroku_fbr8025m:8g6sklcu1pf69pl2pmj14oipsu@ds163822.mlab.com:63822/heroku_fbr8025m");
 
 
 // Use express.static to serve the public folder as a static directory
