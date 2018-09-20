@@ -19,7 +19,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //Connect to mongo db
 // mongoose.connect("mongodb://localhost/bbc", {useNewUrlParser: true});
-mongoose.connect("mongodb://heroku_fbr8025m:8g6sklcu1pf69pl2pmj14oipsu@ds163822.mlab.com:63822/heroku_fbr8025m");
+// mongoose.connect("mongodb://heroku_fbr8025m:8g6sklcu1pf69pl2pmj14oipsu@ds163822.mlab.com:63822/heroku_fbr8025m");
+mongoose.connect("mongodb://heroku_p5fxpphq:fcd9c00qhan4mifs7bvi74k4eg@ds111063.mlab.com:11063/heroku_p5fxpphq")
 
 
 // Use express.static to serve the public folder as a static directory
