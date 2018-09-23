@@ -1,0 +1,64 @@
+#menu-bar{
+  margin-top: 20px;
+  background-color : rgba(144, 148, 134, 0.3)
+}
+
+/* .navigation{
+  background-color : rgba(144, 148, 134, 0.3);
+} */
+
+img{
+  margin-top: -40px;
+  display:block;
+  margin:auto;
+}
+
+#ms{
+  color:white;
+  padding:10px;
+}
+#home{
+  padding: 20px;
+  color:white;
+}
+
+#savedArticles{
+  /* padding:20px;
+  color:white; */
+}
+
+.nav-btn{
+  padding : 20px;
+  /* text-align: right; */
+}
+
+#btn-holder{
+  /* padding-top:20px; */
+}
+
+#imageHolder{
+  background-image: url("../images/scrapeArticles.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:100%;
+  padding:200px;
+}
+
+#nyt-title{
+  text-align: center; 
+  color:white; 
+  font-family: 'Times New Roman';
+}
+#page-name{
+  text-align:center; 
+  color:white;
+  font-family: 'Times New Roman';
+}
+
+#headings{
+  margin-left: 20px;
+}
+
+.modal-body{
+  text-align: center;
+}

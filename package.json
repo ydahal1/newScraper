@@ -1,31 +1,29 @@
 {
-  "name": "mongoosescraper",
+  "name": "mongo-scraper-nyt",
   "version": "1.0.0",
-  "description": "\"This app scraps articles from other websites\"",
+  "description": "An app that scrapes NYT and provides users the functionality to view news, save and article, leave comments and delete the comments and articles",
   "main": "server.js",
   "scripts": {
-    "test": "n/a",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/n/a.git"
+    "url": "git+https://github.com/joycedelatorre/Mongo-Scraper-NYT.git"
   },
-  "keywords": [
-    "n/a"
-  ],
-  "author": "\"Yadhap Dahal\"",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/n/a/issues"
+    "url": "https://github.com/joycedelatorre/Mongo-Scraper-NYT/issues"
   },
-  "homepage": "https://github.com/n/a#readme",
+  "homepage": "https://github.com/joycedelatorre/Mongo-Scraper-NYT#readme",
   "dependencies": {
-    "axios": "^0.18.0",
-    "body-parser": "^1.18.3",
+    "axios": "^0.17.1",
     "cheerio": "^1.0.0-rc.2",
-    "express": "^4.16.3",
-    "mongoose": "^5.2.15",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.9",
+    "morgan": "^1.9.0",
+    "node": "^9.4.0",
     "nodemon": "^1.18.4"
   }
 }

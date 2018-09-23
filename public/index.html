@@ -1,55 +1,119 @@
-<style>
-.navbar-nav{
-    text-align: right;
-}
-
-
-.display-div{
-    background-color : lightgrey;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 15px;
-}
-
-#noteDiv{
-    /* text-align: center; */
-}
-
-</style>
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en-us">
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Mongo Scraper</title>
+      <script src="https://code.jquery.com/jquery.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </head>
+  <body>
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="app.js"></script>
-</head>
-<body>
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-            <a class="navbar-brand" href="#">Mongo Scraper</a>
+    <div class="container">
+      <div class="navigation">
+      <div class="row" id="menu-bar">
+        <div class="col-md-6">
+          <div class="row">
+            <!-- <div id="btn-holder-saved"> -->
+              <div  class="nav-btn"id="savedArticles"><button class="btn btn-success">Saved Articles</button>
+            <!-- </div> -->
+            <!-- <div id="btn-holder"> -->
+              <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" id="scrape">SCRAPE</button>
             </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Saved Articles</a></li>
-                <li><a href="scrape">Scrape New</a></li>
-            </ul>
+          </div>
         </div>
-    </nav>
+      </div>
+      </div>
 
-    <div id="displayArticles" class="col-lg-8 col-md-8 col-sm-12 col-xs-12"></div>
-    <div id="noteDiv" class="col-lg-4 col-md-4 col-sm-12 col-xs-12"></div>
+      <div class="row">
+        <img class="img-head img-responsive"src = "images/nyt.png" />
+      </div>
+      
+      <hr>
 
-</body>
+
+      <!-- <div class="row" id="imageHolder">
+        <div class="col-lg-12" id="page-name">
+          <div class="row" id="page-title">
+            <span id="page-title1" style="font-size:80px;">M</span><span id="page-title2" style="font-size:60px;">ONGO</span> <span id="page-title3" style="font-size:80px;"> S</span><span id="page-title4" style="font-size:60px;">CRAPER</span>
+          </div>
+          <div class="row">
+            <h2>New York Times Edition</h2>
+          </div>
+        </div>
+      </div> 
+      <br> -->
+
+      <div class="row">
+        <table class="table table-striped" id="nyt-articles">
+      <!-- <thead >
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Summary</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead> -->
+      <tbody>
+        <!-- Results from DB here -->
+      </tbody>
+    </table>
+      </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5>Done scrapping Articles</h5>
+          </div>
+          <div class="modal-footer">
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notes Modal -->
+    <div class="modal fade" id="comment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-article-id="my_id_value">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body comment_list">  
+          </div>
+
+          <form>
+            <fieldset>
+              <textarea style="margin:7px;" id = "myTextArea"
+                      rows = "15"
+                      cols = "94" placeholder="Type your notes here">
+              </textarea>
+            </fieldset>
+          </form>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary saveComments" >Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div> <!--end of container-->
+    <script src="app.js" type="text/javascript"></script>
+  </body>
 </html>
